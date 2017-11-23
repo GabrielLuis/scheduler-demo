@@ -12,17 +12,18 @@ int main() {
   for (int i=1; i<=n; i++) {//repetiçoes de 1 ate n
     /* Imprime resultado da n-esima iteracao do scheduler */
   //i é o numero da repetição atual
-  if (i%a[0]==0) //caso o numero da repetição atual seja divisivel pela periodicidade de a[0]
+  if (i%(a[0])==0) //caso o numero da repetição atual seja divisivel pela periodicidade de a[0]
   	printf("0");
-  if (i%a[1]==0) //caso o numero da repetição atual seja divisivel pela periodicidade de a[1]
+  if (i%(a[1])==0) //caso o numero da repetição atual seja divisivel pela periodicidade de a[1]
   	printf("1");
-  if (i%a[2]==0) //caso o numero da repetição atual seja divisivel pela periodicidade de a[2]
+  if (i%(a[2])==0) //caso o numero da repetição atual seja divisivel pela periodicidade de a[2]
   	printf("2");
-  if (i%a[3]==0) //caso o numero da repetição atual seja divisivel pela periodicidade de a[3]
+  if (i%(a[3])==0) //caso o numero da repetição atual seja divisivel pela periodicidade de a[3]
   	printf("3");
-  if (i%a[4]==0) //caso o numero da repetição atual seja divisivel pela periodicidade de a[4]
+  if (i%(a[4])==0) //caso o numero da repetição atual seja divisivel pela periodicidade de a[4]
   	printf("4");
-  else printf("-");//caso nenhum contador tenha batido periodicidade
+  if ((i%(a[0])!=0)&&(i%(a[1])!=0)&&(i%(a[2])!=0)&&(i%(a[3])!=0)&&(i%(a[4])!=0)) 
+	printf("-");//caso nenhum contador tenha batido periodicidade
   printf("\n");//quebra de linha necessário ao final de cada repetição
   }
   return 0;
